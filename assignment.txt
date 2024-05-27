@@ -1,0 +1,61 @@
+Django REST Framework Assignment
+
+Time Limit: 1 hour
+
+Objective: Demonstrate your understanding of Django REST Framework by creating a simple API endpoint for a "Book" resource. The API should support basic CRUD operations (Create, Read, Update, Delete).
+
+
+Project Setup:
+
+1. Create a new Django project (if you don't already have one):
+
+django-admin startproject bookstore
+
+
+2. Create a new Django app within the project:
+
+cd bookstore
+python manage.py startapp api
+
+Tasks:
+
+1. Models:
+
+	- Create a Django model named Book with the following fields:
+		○ title (CharField)
+		○ author (CharField)
+		○ genre (CharField)
+		○ published_date (DateField)
+		○ price (DecimalField)
+
+2. Serializers:
+
+	- Create a Django REST Framework serializer for the Book model that
+includes all the fields.
+
+3. Views:
+	- Create a set of class-based views that inherit from
+rest_framework.viewsets.ModelViewSet to handle the following actions:
+		○ list (GET - Retrieve all books)
+		○ retrieve (GET - Retrieve a single book by ID)
+		○ create (POST - Create a new book)
+		○ update (PUT - Update an existing book by ID)
+		○ partial_update (PATCH - Partially update an existing book by ID)
+		○ destroy (DELETE - Delete a book by ID)
+
+4. URL Routing:
+	- Define URL patterns in your app's urls.py to route requests to the
+appropriate views. Use the Django REST Framework's router to
+automatically generate the URLs for your viewset.
+
+5. Bonus (If Time Permits):
+	- Implement filtering (e.g., filter books by author or genre) and/or ordering
+(e.g., order books by published date or price).
+
+
+Submission:
+
+Submit the following:
+	- Your Django project code (including the models.py , serializers.py ,
+views.py , and urls.py files).
+	- Brief instructions on how to run your project locally.
